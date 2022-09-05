@@ -4,6 +4,7 @@ public class ElectronicRemote
 
 	public static void main(String[] args) 
 	{
+		// 2í•™ë…„ë“¤ ì´ê±° ë³´ì„¸ìš”
 		Tv myTv1 = new Tv();
 		Diswash mydis1 = new Diswash();
 		
@@ -25,7 +26,7 @@ class Tv
 	
 	void print() 
 	{
-		System.err.println("TV Àü¿øÀº"+ onOff + "ÀÖ½À´Ï´Ù");
+		System.err.println("TV ì „ì›ì€"+ onOff + "ìˆìŠµë‹ˆë‹¤");
 	}
 }
 
@@ -35,6 +36,6 @@ class Diswash
 	
 	void print() 
 	{
-		System.err.println("½Ä±â¼¼Ã´±â Àü¿øÀº"+ onOff + "ÀÖ½À´Ï´Ù");
+		System.err.println("ì‹ê¸°ì„¸ì²™ê¸° ì „ì›ì€"+ onOff + "ìˆìŠµë‹ˆë‹¤");
 	}
 }
