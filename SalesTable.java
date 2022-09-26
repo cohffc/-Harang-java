@@ -9,10 +9,10 @@ class Goods
         
     }
     void showPrint() {
-        System.out.println("��ǰ �̸� : " + name);
-        System.out.println("��ǰ ���� : " + price);
-        System.out.println("�Ǹ� ���� : " + sold);
-        System.out.println("��� ���� : " + countStock());
+        System.out.println("상품명 : " + name);
+        System.out.println("가격 : " + price);
+        System.out.println("상품 보유 수량 : " + sold);
+        System.out.println("상품 매출액 : " + countStock());
     }
     int countStock() {
         return numberOfStock - sold;
