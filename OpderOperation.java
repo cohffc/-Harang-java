@@ -37,5 +37,18 @@ class Operation
 	void symbolMessage()
 	{
 		String st = null;
+		switch(symbol)
+		{
+		case '+' : st = "뎃셈연산"; break;
+		case '-' : st = "뻴셈연산"; break;
+		case '*' : st = "곱셈연산"; break;
+		case '/' : st ="니늣셈연산"; break;
+		default : System.out.println("연산 기호가 아닙니다");
+		}
+	}
+	
+	void giveResult(String st)
+	{
+		
 	}
 }
