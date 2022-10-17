@@ -1,53 +1,67 @@
 
-public class MyPoint 
-{
+public class OpderOperation {
 
-	public static void main(String[] args) 
-	{
-		 int nx, ny;
-		 Point p1 = new Point();
-		 p1.setX("p1의 ", 3);
-		 p1.setY(-5);
-		 nx = p1.getX();
-		 ny = p1.getY();
-		 System.out.print("이동: x"+ nx + "y" + ny + "\n");
-		 Point p2 = new Point();
-		 p2.setX("p2의 ", -2);
-		 p2.setY(6);
-		 nx = p2.getX();
-		 ny = p2.getY();
-		 System.out.print("이동: x"+ nx + "y" + ny );
-		 
+	public static void main(String[] args) {
+		int result;
+		
+		Operation opder1 = new Operation();
+		result = opder1.chooseSymbol(13,44,'*');
+		System.out.println(result);
+		result = opder1.chooseSymbol(36,6,'/');
+		System.out.println(result);
+		result = opder1.chooseSymbol(44,36,'+');
+		System.out.println(result);
+		result = opder1.chooseSymbol(6,13,'-');
+		System.out.println(result);
+
 	}
 
 }
 
-class Point
+class Operation
 {
-	int x, y;
-	String n;
+	int integer1,integer2,value;
+	char symbol;
 	
-	void setX(String n, int px)
+	int chooseSymbol(int a, int b, char c)
 	{
-		x = px;
-		System.out.print(n + "초기: x" + x + " ");
+		integer1 = a;
+		integer2 = b;
+		symbol = c;
+		
+		switch(symbol)
+		{
+		case '+' : value = integer1 + integer2; break;
+		case '-' : value = integer1 - integer2; break;
+		case '*' : value = integer1 * integer2; break;
+		case '/' : value = integer1 / integer2; break;
+		default : System.out.println("연산 기호가 아닙니다");
+		}
+		
+		
+		symbolMessage();
+		
+		return value;
 	}
 	
-	void setY(int py)
+	void symbolMessage()
 	{
-		y = py;
-		System.out.print("y" + y + "\t");
+		String st = null;
+		switch(symbol)
+		{
+		case '+' : st = "뎃셈연산"; break;
+		case '-' : st = "뻴셈연산"; break;
+		case '*' : st = "곱셈연산"; break;
+		case '/' : st ="니늣셈연산"; break;
+		default : System.out.println("연산 기호가 아닙니다");
+		}
+		
+		giveResult(st);
+
 	}
 	
-	int getX()
-	{	
-		x = x + y;
-		return x;
-	}
-	
-	int getY()
+	void giveResult(String st)
 	{
-		y = y - x;
-		return y;
+		System.out.print(st + ":" + integer1 + symbol + integer2 +"=");
 	}
 }
