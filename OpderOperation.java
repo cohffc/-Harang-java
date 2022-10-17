@@ -49,6 +49,6 @@ class Operation
 	
 	void giveResult(String st)
 	{
-		System.out.println(st + integer1 + integer2 + "=" + value);
+		System.out.println(st + ":" + integer1 + symbol + integer2 +"=" + value);
 	}
 }
